@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const About = () => {
     return (
@@ -46,7 +47,7 @@ const About = () => {
 
                 {/* Heading */}
                 <h1 className="text-4xl md:text-5xl font-bold text-center mb-12">
-                    About Evaire London
+                    About London Stubble
                 </h1>
 
                 {/* Glass Card */}
@@ -56,9 +57,9 @@ const About = () => {
                     <section>
                         <h2 className="text-2xl font-semibold mb-4">✨ Our Story</h2>
                         <p className="text-gray-200 leading-relaxed">
-                            Evaire London was born from a simple idea — modern men deserve grooming that matches their ambition.
+                            London Stubble was born from a simple idea — modern men deserve grooming that matches their ambition.
                             In a world full of cluttered products and false promises, we set out to create something different.
-                            Built with passion and precision, Evaire London is more than grooming — it’s a statement of confidence.
+                            Built with passion and precision, London Stubble is more than grooming — it’s a statement of confidence.
                         </p>
                     </section>
 
@@ -104,11 +105,15 @@ const About = () => {
                     {/* CTA */}
                     <div className="text-center pt-6">
                         <p className="text-lg text-gray-200 mb-4">
-                            Evaire London isn’t just grooming. It’s a lifestyle.
+                            London Stubble isn’t just grooming. It’s a lifestyle.
                         </p>
-                        <button className="px-6 py-3 bg-white text-black rounded-xl font-semibold hover:scale-105 transition">
-                            Explore Products
-                        </button>
+                        
+                        <NavLink to="/products" >
+                            <button className="w-full sm:w-auto px-6 py-3 border border-black/30 rounded-xl hover:bg-white/10 transition">
+                                Explore Collection
+                            </button>
+                        </NavLink>
+                        
                     </div>
 
                 </div>

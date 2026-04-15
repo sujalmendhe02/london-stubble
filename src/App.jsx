@@ -4,18 +4,20 @@ import Footer from "../components/Footer";
 import HomePage from "../pages/Home";
 import About from "../pages/About";
 import Products from "../pages/Products";
+import Brand from "../pages/Brand";
+import Contact from "../pages/Contact";
 // Pages
 // function Home() {
 //   return <HomePage />;
 // }
 
-function Brand() {
-  return <h1 className="p-5 text-xl">Brand Style Page</h1>;
-}
+// function Brand() {
+//   return <h1 className="p-5 text-xl">Brand Style Page</h1>;
+// }
 
-function Categories() {
-  return <h1 className="p-5 text-xl">Categories Page</h1>;
-}
+// function Categories() {
+//   return <h1 className="p-5 text-xl">Categories Page</h1>;
+// }
 
 // function Products() {
 //   return <h1 className="p-5 text-xl">Products Page</h1>;
@@ -36,9 +38,9 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/brand" element={<Brand />} />
-          <Route path="/categories" element={<Categories />} />
           <Route path="/products" element={<Products />} />
           <Route path="/about" element={<About />} />
+          <Route path="/contacts" element={<Contact />} />
         </Routes>
       </main>
 

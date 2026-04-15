@@ -1,185 +1,282 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 export default function HomePage() {
+
     const products = [
         {
-            title: "Beard Oil",
-            desc: "Deep nourishment. Stronger growth. Refined style.",
+            title: "London Stubble Charcoal Face Wash",
+            desc: "Deep cleansing. Oil control. Pollution defense.",
             points: [
-                "Hydrates & softens beard",
-                "Promotes healthy growth",
-                "Non-greasy finish",
+                "Removes dirt & excess oil",
+                "Detoxifies skin with charcoal",
+                "Prevents acne & breakouts",
             ],
-            img: "/img/bgimg.jpg",
+            img: "/img/Charcol Face Wash 1.jpeg",
         },
         {
-            title: "Hair Wax",
-            desc: "Strong hold. Matte finish. All-day control.",
+            title: "London Stubble Collagen Face Wash",
+            desc: "Hydration boost. Skin repair. Youthful glow.",
             points: [
-                "Long-lasting hold",
-                "Natural matte look",
-                "Easy to wash",
+                "Improves skin elasticity",
+                "Keeps skin hydrated & soft",
+                "Reduces fine lines",
             ],
-            img: "/img/bgimg.jpg",
+            img: "/img/Collagen Face Wash 1.jpg",
         },
         {
-            title: "Face Wash",
-            desc: "Clean skin. Fresh feel. Daily essential.",
+            title: "London Stubble Niacinamide Serum",
+            desc: "Clear skin. Even tone. Pore control.",
             points: [
-                "Removes dirt & oil",
-                "Brightens skin",
-                "Gentle formula",
+                "Reduces dark spots & marks",
+                "Controls oil production",
+                "Minimizes pores",
             ],
-            img: "/img/bgimg.jpeg",
+            img: "/img/Niaciamide Serum 1.jpg",
+        },
+        {
+            title: "London Stubble Beard Serum",
+            desc: "Stronger beard. Smooth texture. Healthy shine.",
+            points: [
+                "Promotes beard growth",
+                "Softens & conditions hair",
+                "Adds shine without greasiness",
+            ],
+            img: "/img/Beard Serum 1.jpg",
         },
     ];
 
-    const [index, setIndex] = useState(0);
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setIndex((prev) => (prev + 1) % products.length);
-        }, 3000);
-        return () => clearInterval(interval);
-    }, []);
-
-    const product = products[index];
+    const [selectedProduct, setSelectedProduct] = useState(null);
 
     return (
-        <div className="bg-[#0a0a0a] text-white min-h-screen">
+        <div className="relative overflow-hidden bg-gradient-to-br from-white via-[#e6ecff] to-[#012169] text-black">
 
             {/* HERO */}
-            <section className="min-h-screen grid grid-cols-1 md:grid-cols-2 items-center px-5 sm:px-8 md:px-16 lg:px-24 py-12 bg-white text-black gap-10">
+            <section className="relative min-h-screen grid grid-cols-2 items-center px-4 md:px-20 py-16">
 
                 {/* TEXT */}
-                <div className="text-center md:text-left">
-                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
+                <div className="relative z-10 text-left">
+                    <h2 className="text-3xl md:text-6xl font-extrabold text-[#001f3f] leading-tight">
                         Premium Grooming for the Modern Man
-                    </h1>
+                    </h2>
 
-                    <p className="text-gray-600 text-base sm:text-lg md:text-xl max-w-xl mx-auto md:mx-0 mb-6">
+                    <p className="text-gray-600 mt-4 mb-6 max-w-md">
                         Crafted for confidence. Designed for everyday excellence.
                     </p>
 
-                    <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start">
-                        <button className="w-full sm:w-auto px-6 py-3 bg-black text-white rounded-xl font-semibold hover:scale-105 transition">
+                    <div className="flex gap-3">
+                        <NavLink to="/products">
+                            <button className="px-5 py-2 bg-[#012169] text-white rounded-xl hover:scale-105 transition">
+                                Shop Now
+                            </button>
+                        </NavLink>
+
+                        <NavLink to="/products">
+                            <button className="px-5 py-2 border border-black/30 rounded-xl hover:bg-[#C8102E] hover:text-white transition">
+                                Explore
+                            </button>
+                        </NavLink>
+                    </div>
+                </div>
+
+                {/* IMAGE */}
+                <div className="flex justify-end">
+                    <img
+                        src="/img/BackGround.png"
+                        alt=""
+                        className="w-full max-w-sm md:max-w-md object-contain"
+                    />
+                </div>
+
+            </section>
+
+            {/* PRODUCT GRID */}
+
+            <section className="py-0 px-6 md:px-20">
+
+                {/* Heading */}
+                <div className="text-center mb-8">
+                    <h2 className="text-3xl md:text-4xl font-semibold tracking-wide">
+                        OUR PRODUCTS
+                    </h2>
+                    <p className="text-sm opacity-70 mt-2 italic">
+                        Upgrade Your Routine
+                    </p>
+                </div>
+
+                {/* Grid */}
+                <div className="grid grid-cols-2 gap-6 max-w-3xl mx-auto">
+
+                    {products.map((p, i) => (
+                        <div
+                            key={i}
+                            onClick={() => setSelectedProduct(p)}
+                            className="cursor-pointer group text-center"
+                        >
+
+                            {/* Product Card */}
+                            <div className="
+                    rounded-2xl overflow-hidden
+                    bg-white/30 backdrop-blur-md
+                    border border-white/20
+                    shadow-lg hover:shadow-2xl
+                    transition duration-300
+                    p-4
+                ">
+                                <img
+                                    src={p.img}
+                                    alt={p.title}
+                                    className="
+                            w-full h-36 object-contain
+                            group-hover:scale-110
+                            transition duration-500
+                        "
+                                />
+                            </div>
+
+                            {/* Title */}
+                            <h3 className="mt-3 text-sm font-medium tracking-wide uppercase">
+                                {p.title}
+                            </h3>
+
+                        </div>
+                    ))}
+
+                </div>
+
+                {/* Button */}
+                <div className="text-center mt-10">
+                    <NavLink to="/products">
+                        <button className="
+                px-6 py-3 
+                bg-[#012169] text-white 
+                rounded-xl 
+                hover:scale-105 
+                transition
+            ">
                             Shop Now
                         </button>
-                        <button className="w-full sm:w-auto px-6 py-3 border border-black/30 rounded-xl hover:bg-black/5 transition">
-                            Explore Collection
-                        </button>
+                    </NavLink>
+                </div>
+
+            </section>
+
+            {/* SPLIT SECTION */}
+            {/* <section className="grid md:grid-cols-2">
+
+                <div className="bg-[#012169] text-white p-10 flex items-center">
+                    <div>
+                        <h2 className="text-3xl font-semibold mb-4">
+                            British Inspired Grooming
+                        </h2>
+                        <p className="text-gray-200">
+                            Crafted with precision and elegance for the modern man.
+                        </p>
                     </div>
                 </div>
 
-                {/* IMAGE */}
-                <div className="flex justify-center">
+                <div>
                     <img
                         src="/img/bgimg.jpeg"
-                        alt="Grooming Product"
-                        className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg rounded-2xl shadow-xl object-cover"
+                        className="w-full h-full object-cover"
                     />
                 </div>
-            </section>
+            </section> */}
 
-            {/* FEATURED PRODUCT */}
-            <section
-                className="py-16 sm:py-20 px-5 sm:px-8 md:px-16 lg:px-24 grid grid-cols-1 md:grid-cols-2 gap-10 items-center relative overflow-hidden"
-                style={{
-                    background: `
-                    linear-gradient(120deg, rgba(30,58,138,0.6) 0%, rgba(255,255,255,0.1) 40%, rgba(59,130,246,0.6) 100%)
-                    `
-                }}
-            >
-                <div className="absolute inset-0 bg-black/30 backdrop-blur-sm"></div>
+            {/* WHY CHOOSE US */}
+            <section className="py-8 px-6 md:px-20">
 
-                {/* IMAGE */}
-                <div className="flex justify-center relative z-10">
-                    <img
-                        key={index}
-                        src={product.img}
-                        alt=""
-                        className="w-56 sm:w-64 md:w-72 lg:w-80 h-56 sm:h-64 md:h-72 lg:h-80 object-cover rounded-2xl shadow-lg transition-all duration-700"
-                    />
-                </div>
+                <h2 className="text-3xl md:text-4xl text-center mb-12 font-semibold">
+                    Why Choose Us
+                </h2>
 
-                {/* TEXT */}
-                <div key={index} className="relative z-10 text-center md:text-left">
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
-                        {product.title}
-                    </h2>
+                <div className="grid md:grid-cols-3 gap-6">
 
-                    <p className="text-gray-200 mb-4 text-sm sm:text-base">
-                        {product.desc}
-                    </p>
+                    {["Quality Ingredients", "Modern Design", "Effortless Grooming"].map((t, i) => (
+                        <div
+                            key={i}
+                            className="
+                            p-6 rounded-2xl 
+                            bg-white/40 backdrop-blur-md
+                            border border-white/30
+                            shadow-md hover:shadow-xl
+                            hover:-translate-y-2
+                            transition duration-300
+                        ">
+                            <h3 className="text-xl font-semibold mb-2">
+                                {t}
+                            </h3>
 
-                    <ul className="space-y-2 text-gray-300 mb-6 text-sm sm:text-base">
-                        {product.points.map((p, i) => (
-                            <li key={i}>✔ {p}</li>
-                        ))}
-                    </ul>
+                            <p className="text-gray-600 text-sm">
+                                High-performance grooming built for modern lifestyle.
+                            </p>
+                        </div>
+                    ))}
 
-                    <button className="w-full sm:w-auto px-6 py-3 bg-white text-black rounded-xl font-semibold hover:scale-105 transition">
-                        View Product
-                    </button>
-                </div>
-            </section>
-
-            {/* BRAND PROMISE */}
-            <section
-                className="py-16 sm:py-20 px-5 sm:px-8 md:px-16 lg:px-24 relative overflow-hidden"
-                style={{
-                    background: `
-                    linear-gradient(120deg, rgba(1,33,105,0.4) 0%, rgba(255,255,255,0.15) 30%, rgba(200,16,46,0.4) 70%)
-                    `
-                }}
-            >
-                <div className="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
-
-                <div className="relative z-10">
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-10 sm:mb-12">
-                        Why Choose Us
-                    </h2>
-
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
-                        {["Quality Ingredients", "Modern Design", "Effortless Grooming"].map((title, i) => (
-                            <div key={i} className="p-5 sm:p-6 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-white/30 transition">
-                                <h3 className="text-lg sm:text-xl font-semibold mb-3">{title}</h3>
-                                <p className="text-gray-300 text-sm sm:text-base">
-                                    High-performance grooming built for modern lifestyle.
-                                </p>
-                            </div>
-                        ))}
-                    </div>
                 </div>
             </section>
 
             {/* CTA */}
-            <section
-                className="py-16 sm:py-20 px-5 text-center relative overflow-hidden"
-                style={{
-                    background: `
-                    linear-gradient(120deg, rgba(2,6,23,0.95) 0%, rgba(15,23,42,0.95) 40%, rgba(30,58,138,0.8) 100%)
-                    `
-                }}
-            >
-                <div className="absolute inset-0 bg-black/60 backdrop-blur-md"></div>
+            <section className="py-16 text-center bg-[#012169] text-white">
 
-                <div className="relative z-10">
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
-                        Upgrade your grooming game today
-                    </h2>
+                <h2 className="text-3xl md:text-4xl mb-4 font-semibold">
+                    Upgrade your grooming game today
+                </h2>
 
-                    <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 mt-6">
-                        <button className="w-full sm:w-auto px-6 py-3 bg-white text-black rounded-xl font-semibold hover:scale-105 transition">
-                            Shop Now
+                <p className="mb-6 text-gray-200">
+                    Experience premium grooming like never before.
+                </p>
+
+                <div className="flex gap-4 justify-center">
+                    <button className="px-6 py-3 bg-white text-[#012169] rounded-xl hover:scale-105 transition">
+                        Shop Now
+                    </button>
+
+                    <button className="px-6 py-3 border border-white/40 rounded-xl hover:bg-[#C8102E] transition">
+                        Explore
+                    </button>
+                </div>
+            </section>
+
+            {/* MODAL */}
+            {selectedProduct && (
+                <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50">
+
+                    <div className="bg-white rounded-2xl p-6 w-[90%] max-w-md relative">
+
+                        <button
+                            onClick={() => setSelectedProduct(null)}
+                            className="absolute top-3 right-3 text-xl"
+                        >
+                            ✕
                         </button>
 
-                        <button className="w-full sm:w-auto px-6 py-3 border border-white/30 rounded-xl hover:bg-white/10 transition">
-                            Explore Collection
+                        <img
+                            src={selectedProduct.img}
+                            className="w-full h-52 object-cover rounded-xl mb-4"
+                        />
+
+                        <h2 className="text-2xl font-semibold mb-2">
+                            {selectedProduct.title}
+                        </h2>
+
+                        <p className="text-gray-600 mb-3">
+                            {selectedProduct.desc}
+                        </p>
+
+                        <ul className="text-sm text-gray-500 mb-4 space-y-1">
+                            {selectedProduct.points.map((pt, i) => (
+                                <li key={i}>• {pt}</li>
+                            ))}
+                        </ul>
+
+                        <button className="w-full py-3 bg-[#012169] text-white rounded-xl">
+                            Shop Now
                         </button>
                     </div>
                 </div>
-            </section>
+            )}
+
         </div>
     );
 }

@@ -26,9 +26,51 @@ const Header = () => {
 
 
                 {/* Logo */}
-                <div>
-                    <NavLink to="/">
-                        <img src="img/logo.png" alt="logo" className="h-14" />
+                <div className="flex items-center">
+                    <NavLink to="/" className="flex items-center gap-3 group">
+
+                        {/* Image */}
+                        <img
+                            src="img/logo.png"
+                            alt="logo"
+                            className="h-12 w-auto ml-6 transition duration-300 group-hover:scale-105"
+                        />
+
+                        {/* Text */}
+                        {/* <div className="flex flex-col leading-none"> */}
+
+                        {/* LONDON */}
+                        {/* <span
+                                className="
+                                text-2xl md:text-3xl
+                                font-normal
+                                tracking-wide
+                                uppercase
+                                bg-gradient-to-r from-[#012169] to-[#C8102E]
+                                bg-clip-text text-transparent
+                                "
+                                style={{ fontFamily: "'Bebas Neue', sans-serif" }}
+                            >
+                                LONDON
+                            </span> */}
+
+                        {/* STUBBLE */}
+                        {/* <span
+                                className="
+                                text-xs md:text-sm
+                                font-bold
+                                tracking-[0.35em]
+                                uppercase
+                                bg-gradient-to-r from-[#012169] to-[#C8102E]
+                                bg-clip-text text-transparent
+                                "
+                                style={{ fontFamily: "'Oswald', sans-serif" }}
+                            >
+                                STUBBLE
+                            </span> */}
+
+                        {/* </div> */}
+
                     </NavLink>
                 </div>
 
