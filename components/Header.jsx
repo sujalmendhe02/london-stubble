@@ -22,68 +22,61 @@ const Header = () => {
     return (
         <>
             {/* HEADER */}
-            <header className="w-full bg-[linear-gradient(to_right,#012169_0%,#eef2ff_10%,#C8102E_70%,#012169_100%)] px-6 md:px-10 py-4 flex items-center justify-between">
+            <header className="relative w-full bg-[linear-gradient(to_right,#012169_0%,#C8102E_40%,#ffffff_50%,#C8102E_60%,#012169_100%)] px-6 md:px-10 py-4 flex items-center justify-between">
 
+                {/* LEFT NAV */}
+                <nav className="hidden md:flex items-center gap-6">
+                    <NavLink to="/" className={linkClass}>
+                        <Home size={20} />
+                    </NavLink>
+                    <NavLink to="/brand" className={linkClass}>
+                        <Palette size={20} />
+                    </NavLink>
+                </nav>
 
-                {/* Logo */}
-                <div className="flex items-center">
+                {/* CENTER LOGO (ABSOLUTE CENTER) */}
+                <div className="absolute left-1/2 transform -translate-x-1/2">
                     <NavLink to="/" className="flex items-center gap-3 group">
 
-                        {/* Image */}
+                        {/* LONDON */}
+                        <span
+                            className="text-xs md:text-sm font-bold tracking-[0.35em] uppercase text-white"
+                            style={{ fontFamily: "'Oswald', sans-serif" }}
+                        >
+                            LONDON
+                        </span>
+
+                        {/* LOGO IMAGE */}
                         <img
-                            src="img/logo.png"
+                            src="/img/logo.png"
                             alt="logo"
-                            className="h-12 w-auto ml-6 transition duration-300 group-hover:scale-105"
+                            className="h-10 w-auto transition duration-300 group-hover:scale-110 group-hover:drop-shadow-[0_0_10px_rgba(200,16,46,0.6)]"
                         />
 
-                        {/* Text */}
-                        {/* <div className="flex flex-col leading-none"> */}
-
-                        {/* LONDON */}
-                        {/* <span
-                                className="
-                                text-2xl md:text-3xl
-                                font-normal
-                                tracking-wide
-                                uppercase
-                                bg-gradient-to-r from-[#012169] to-[#C8102E]
-                                bg-clip-text text-transparent
-                                "
-                                style={{ fontFamily: "'Bebas Neue', sans-serif" }}
-                            >
-                                LONDON
-                            </span> */}
-
                         {/* STUBBLE */}
-                        {/* <span
-                                className="
-                                text-xs md:text-sm
-                                font-bold
-                                tracking-[0.35em]
-                                uppercase
-                                bg-gradient-to-r from-[#012169] to-[#C8102E]
-                                bg-clip-text text-transparent
-                                "
-                                style={{ fontFamily: "'Oswald', sans-serif" }}
-                            >
-                                STUBBLE
-                            </span> */}
-
-                        {/* </div> */}
-
+                        <span
+                            className="text-xs md:text-sm font-bold tracking-[0.35em] uppercase text-white"
+                            style={{ fontFamily: "'Oswald', sans-serif" }}
+                        >
+                            STUBBLE
+                        </span>
                     </NavLink>
                 </div>
 
-                {/* Desktop Nav */}
-                <nav className="hidden md:flex items-center gap-8">
-                    <NavLink to="/" className={linkClass}><Home size={20} />Home</NavLink>
-                    <NavLink to="/brand" className={linkClass}><Palette size={20} />Brand</NavLink>
-                    <NavLink to="/contacts" className={linkClass}><User size={20} />Contacts</NavLink>
-                    <NavLink to="/products" className={linkClass}><ShoppingBag size={20} />Products</NavLink>
-                    <NavLink to="/about" className={linkClass}><Info size={20} />About</NavLink>
+                {/* RIGHT NAV */}
+                <nav className="hidden md:flex items-center gap-6">
+                    <NavLink to="/products" className={linkClass}>
+                        <ShoppingBag size={20} />
+                    </NavLink>
+                    <NavLink to="/about" className={linkClass}>
+                        <Info size={20} />
+                    </NavLink>
+                    <NavLink to="/contacts" className={linkClass}>
+                        <User size={20} />
+                    </NavLink>
                 </nav>
 
-                {/* Mobile Menu */}
+                {/* MOBILE MENU BUTTON */}
                 <button
                     className="md:hidden text-white"
                     onClick={() => setIsOpen(true)}
@@ -119,16 +112,16 @@ const Header = () => {
                         <Palette /> Brand
                     </NavLink>
 
-                    <NavLink to="/contacts" className={linkClass} onClick={() => setIsOpen(false)}>
-                        <User /> Contacts
-                    </NavLink>
-
                     <NavLink to="/products" className={linkClass} onClick={() => setIsOpen(false)}>
                         <ShoppingBag /> Products
                     </NavLink>
 
                     <NavLink to="/about" className={linkClass} onClick={() => setIsOpen(false)}>
                         <Info /> About
+                    </NavLink>
+
+                    <NavLink to="/contacts" className={linkClass} onClick={() => setIsOpen(false)}>
+                        <User /> Contacts
                     </NavLink>
                 </nav>
             </div>
