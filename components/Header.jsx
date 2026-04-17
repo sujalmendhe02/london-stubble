@@ -22,7 +22,7 @@ const Header = () => {
     return (
         <>
             {/* HEADER */}
-            <header className="relative w-full bg-[linear-gradient(to_right,#012169_0%,#C8102E_40%,#ffffff_50%,#C8102E_60%,#012169_100%)] px-6 md:px-10 py-4 flex items-center justify-between">
+            <header className="relative w-full bg-[linear-gradient(to_right,#012169_0%,#C8102E_38%,#ffffff_50%,#ffffff_50%,#C8102E_60%,#012169_100%)] px-6 md:px-10 py-4 flex items-center justify-between">
 
                 {/* LEFT NAV */}
                 <nav className="hidden md:flex items-center gap-6">
@@ -50,7 +50,7 @@ const Header = () => {
                         <img
                             src="/img/logo.png"
                             alt="logo"
-                            className="h-10 w-auto transition duration-300 group-hover:scale-110 group-hover:drop-shadow-[0_0_10px_rgba(200,16,46,0.6)]"
+                            className="h-16 w-auto transition duration-300 group-hover:scale-110 group-hover:drop-shadow-[0_0_10px_rgba(200,16,46,0.6)]"
                         />
 
                         {/* STUBBLE */}
