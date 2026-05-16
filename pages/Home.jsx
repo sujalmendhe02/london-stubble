@@ -333,758 +333,758 @@
 
 
 
-import React from "react";
-import { useNavigate } from "react-router-dom";
-
-export default function HomePage() {
-    const navigate = useNavigate();
-
-    return (
-        <div className="bg-[#f8f9fc] text-gray-900 overflow-hidden">
-
-            {/* HERO */}
-            <section className="relative min-h-screen flex items-center px-6 md:px-20">
-
-                {/* Background */}
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(200,16,46,0.12),transparent_30%),radial-gradient(circle_at_bottom_left,rgba(1,33,105,0.10),transparent_35%),linear-gradient(to_bottom,#ffffff,#f8f9fc,#eef2ff)]"></div>
-
-                {/* Grid */}
-                <div className="absolute inset-0 opacity-10 bg-[linear-gradient(rgba(0,0,0,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.04)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
-
-                <div className="relative z-10 grid md:grid-cols-2 gap-14 items-center w-full">
-
-                    {/* LEFT */}
-                    <div>
-
-                        <img
-                            src="/img/logo.png"
-                            alt="Logo"
-                            className="h-20 mb-5 object-contain  p-0 m-0 "
-                        />
-
-                        <p className="uppercase tracking-[0.4em] text-sm text-gray-500 mb-5">
-                            London Stubble
-                        </p>
-
-                        <h1 className="text-5xl md:text-7xl font-black leading-tight">
-                            Grooming
-                            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#012169] via-black to-[#C8102E]">
-                                Refined.
-                            </span>
-                        </h1>
-
-                        <p className="mt-6 text-gray-600 text-lg max-w-xl leading-relaxed">
-                            Premium skincare and beard essentials built for men who move with confidence.
-                            Powerful formulas. Elevated design.
-                        </p>
-
-                        <div className="mt-8 flex gap-4 flex-wrap">
-                            <button
-                                onClick={() => navigate("/products")}
-                                className="bg-[#C8102E] text-white px-7 py-3 rounded-full font-semibold hover:scale-105 transition"
-                            >
-                                Shop Now
-                            </button>
-
-                            <button
-                                onClick={() => navigate("/products")}
-                                className="border border-gray-300 px-7 py-3 rounded-full hover:bg-black hover:text-white transition"
-                            >
-                                View Collection
-                            </button>
-                        </div>
-                    </div>
-
-                    {/* RIGHT */}
-                    <div className="flex justify-center">
-                        <div className="relative">
-                            <div className="absolute -inset-6 bg-gradient-to-r from-[#012169] to-[#C8102E] blur-3xl opacity-15 rounded-full"></div>
-
-                            <img
-                                src="img/model.png"
-                                alt="model"
-                                className="relative h-[420px] md:h-[560px] object-contain drop-shadow-2xl scale-x-[-1]"
-                            />
-                        </div>
-                    </div>
-
-                </div>
-            </section>
-
-            {/* TRUST BAR */}
-            <section className="border-y border-gray-200 bg-white">
-                <div className="grid md:grid-cols-4 text-center">
-                    {[
-                        "Premium Ingredients",
-                        "Made For Men",
-                        "Fast Results",
-                        "Modern Design",
-                    ].map((item, i) => (
-                        <div key={i} className="py-5 text-sm uppercase tracking-[0.25em] text-gray-600">
-                            {item}
-                        </div>
-                    ))}
-                </div>
-            </section>
-
-            {/* BRAND STORY / PHILOSOPHY SECTION - Pitch Theme Inspired */}
-            <section className="bg-white">
-                <div className="grid md:grid-cols-2">
-
-                    {/* BOX 1 - TEXT */}
-                    <div className="bg-gradient-to-br from-white via-[#f8f9fc] to-[#eef3ff] text-gray-900 p-10 md:p-14 flex flex-col justify-center">
-                        <p className="uppercase tracking-[0.35em] text-sm text-[#C8102E] font-bold mb-3">
-                            London Standard
-                        </p>
-
-                        <h2 className="text-4xl md:text-5xl font-black leading-tight mb-5">
-                            Our <span className="block text-[#012169]">Philosophy</span>
-                        </h2>
-
-                        <p className="text-lg text-gray-700 leading-relaxed max-w-md font-semibold">
-                            Precision skincare crafted for men who value class, confidence,
-                            and results.
-                        </p>
-                    </div>
-
-                    {/* BOX 2 - IMAGE */}
-                    <div className="relative h-[350px] md:h-[450px] overflow-hidden">
-                        <img
-                            src="img/WhatsApp Image 2026-04-16 at 3.24.23 PM.jpeg"
-                            className="w-full h-full object-cover transition duration-700 hover:scale-105"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-                    </div>
-
-                    {/* BOX 3 - IMAGE */}
-                    <div className="relative h-[350px] md:h-[450px] overflow-hidden order-2 md:order-none">
-                        <img
-                            src="img/WhatsApp Image 2026-04-16 at 3.34.27 PM.jpeg"
-                            className="w-full h-full object-cover transition duration-700 hover:scale-105"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-                    </div>
-
-                    {/* BOX 4 - TEXT */}
-                    <div className="bg-gradient-to-br from-[#fff8f8] via-white to-[#eef2ff] text-gray-900 p-10 md:p-14 flex flex-col justify-center">
-                        <p className="uppercase tracking-[0.35em] text-sm text-[#C8102E] font-bold mb-3">
-                            Premium Grooming
-                        </p>
-
-                        <h2 className="text-4xl md:text-5xl font-black leading-tight mb-5">
-                            Effective <span className="block text-[#012169]">Grooming</span>
-                        </h2>
-
-                        <p className="text-lg text-gray-700 leading-relaxed max-w-md font-semibold">
-                            Clean formulas, sharp styling, and timeless British-inspired care
-                            for the modern man.
-                        </p>
-                    </div>
-
-                </div>
-            </section>
-
-            {/* PRODUCTS */}
-            <section className="py-24 px-6 md:px-20">
-                <div className="text-center mb-14">
-                    <h2 className="text-4xl md:text-5xl font-bold">Best Sellers</h2>
-                    <p className="text-gray-500 mt-3">
-                        Engineered for performance. Styled for confidence.
-                    </p>
-                </div>
-
-                <div className="grid md:grid-cols-2 gap-8">
-
-                    {[
-                        {
-                            title: "Face Serum",
-                            img: "/img/WhatsApp Image 2026-04-18 at 8.55.51 PM.jpeg",
-                            desc: "Hydrate, repair and brighten your skin with a lightweight formula.",
-                        },
-                        {
-                            title: "Beard Serum",
-                            img: "/img/WhatsApp Image 2026-04-18 at 8.49.33 PM.jpeg",
-                            desc: "Control, nourish and define your beard with premium care.",
-                        },
-                    ].map((item, i) => (
-                        <div
-                            key={i}
-                            onClick={() => navigate("/products")}
-                            className="group cursor-pointer rounded-3xl border border-gray-200 bg-white p-6 hover:-translate-y-2 hover:shadow-2xl transition"
-                        >
-                            <img
-                                src={item.img}
-                                alt={item.title}
-                                className="w-full h-80 object-contain group-hover:scale-105 transition duration-300"
-                            />
-
-                            <h3 className="mt-6 text-2xl font-semibold">{item.title}</h3>
-                            <p className="text-gray-500 mt-2">{item.desc}</p>
-
-                            <button className="mt-5 text-[#C8102E] font-semibold">
-                                Explore →
-                            </button>
-                        </div>
-                    ))}
-
-                </div>
-            </section>
-
-
-
-            {/* WHY US */}
-            <section className="py-24 px-6 md:px-20 bg-gradient-to-r from-[#012169] via-[#1a1a1a] to-[#C8102E] text-white">
-                <div className="grid md:grid-cols-2 gap-12 items-center">
-
-                    <div>
-                        <h2 className="text-4xl md:text-5xl font-bold">
-                            Why Choose Us
-                        </h2>
-
-                        <p className="mt-5 text-gray-200 leading-relaxed">
-                            London Stubble combines clean formulations with premium aesthetics.
-                            Designed for men who value results and style.
-                        </p>
-                    </div>
-
-                    <div className="grid grid-cols-2 gap-5">
-                        {[
-                            "Clean Formulas",
-                            "Powerful Results",
-                            "Luxury Feel",
-                            "Simple Routine",
-                        ].map((item, i) => (
-                            <div
-                                key={i}
-                                className="bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center"
-                            >
-                                {item}
-                            </div>
-                        ))}
-                    </div>
-
-                </div>
-            </section>
-
-            <section className="w-full bg-white">
-                <div className="grid grid-cols-1 md:grid-cols-2">
-
-                    {/* LEFT CARD */}
-                    <div className="bg-[#fdf7f7] flex flex-col items-center justify-center px-6 py-14 text-center">
-
-                        {/* Artistic Shape */}
-                        <div className="w-full max-w-[440px] bg-[#f8eaea] rounded-[42%_58%_55%_45%/42%_38%_62%_58%] p-6 shadow-md">
-                            <img
-                                src="img/WhatsApp Image 2026-04-19 at 5.01.08 PM.jpeg"
-                                alt="Serum"
-                                className="w-full h-auto rounded-3xl object-cover"
-                            />
-                        </div>
-
-                        <p className="mt-8 text-sm tracking-[4px] uppercase font-semibold text-[#C8102E]">
-                            London Formula
-                        </p>
-
-                        <h2 className="mt-3 text-3xl md:text-4xl font-bold text-[#8B0000]">
-                            SERUMS
-                        </h2>
-                    </div>
-
-                    {/* RIGHT CARD */}
-                    <div className="bg-[#f7f9ff] flex flex-col items-center justify-center px-6 py-14 text-center">
-
-                        {/* Artistic Shape */}
-                        <div className="w-full max-w-[440px] bg-[#e9eeff] rounded-[58%_42%_40%_60%/45%_60%_40%_55%] p-6 shadow-md">
-                            <img
-                                src="img/WhatsApp Image 2026-04-19 at 5.01.13 PM.jpeg"
-                                alt="Face Wash"
-                                className="w-full h-auto rounded-3xl object-cover"
-                            />
-                        </div>
-
-                        <p className="mt-8 text-sm tracking-[4px] uppercase font-semibold text-[#012169]">
-                            Premium Cleanse
-                        </p>
-
-                        <h2 className="mt-3 text-3xl md:text-4xl font-bold text-[#012169]">
-                            FACE WASH
-                        </h2>
-                    </div>
-
-                </div>
-            </section>
-
-            {/* CTA */}
-            <section className="py-24 px-6 md:px-20 text-center bg-white">
-
-                <h2 className="text-4xl md:text-6xl font-black leading-tight">
-                    Look Sharp.
-                    <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#012169] via-black to-[#C8102E]">
-                        Feel Powerful.
-                    </span>
-                </h2>
-
-                <p className="mt-5 text-gray-500 max-w-2xl mx-auto">
-                    Upgrade your grooming routine with products built for the modern man.
-                </p>
-
-                <button
-                    onClick={() => navigate("/products")}
-                    className="mt-8 bg-[#C8102E] text-white px-8 py-4 rounded-full font-semibold hover:scale-105 transition"
-                >
-                    Start Shopping
-                </button>
-
-            </section>
-
-        </div>
-    );
-}
-
-
-// import React, { useState } from "react";
+// import React from "react";
 // import { useNavigate } from "react-router-dom";
 
-// const Home = () => {
+// export default function HomePage() {
 //     const navigate = useNavigate();
-//     const [openFaqIndex, setOpenFaqIndex] = useState(null);
-
-//     const features = [
-//         {
-//             icon: "💎",
-//             title: "Premium Ingredients",
-//             desc: "Clean and effective formulas built for visible results.",
-//         },
-//         {
-//             icon: "✨",
-//             title: "Luxury Grooming",
-//             desc: "Designed for modern men who value premium care.",
-//         },
-//         {
-//             icon: "🛡️",
-//             title: "Skin Safe",
-//             desc: "Gentle products crafted for daily use.",
-//         },
-//         {
-//             icon: "🔄",
-//             title: "Easy Returns",
-//             desc: "Simple and smooth replacement experience.",
-//         },
-//     ];
-
-//     const faqs = [
-//         {
-//             q: "Are your products suitable for all skin types?",
-//             a: "Yes, our formulas are designed for most skin types including oily, dry and combination skin.",
-//         },
-//         {
-//             q: "How long does delivery take?",
-//             a: "Orders usually arrive within 3-7 business days depending on your location.",
-//         },
-//         {
-//             q: "Can I use beard serum daily?",
-//             a: "Yes, daily use is recommended for best nourishment and styling.",
-//         },
-//         {
-//             q: "Do you offer returns?",
-//             a: "Yes, we offer hassle-free returns on eligible products.",
-//         },
-//     ];
 
 //     return (
-//         <div className="bg-stone-50 text-stone-900 overflow-hidden">
+//         <div className="bg-[#f8f9fc] text-gray-900 overflow-hidden">
 
 //             {/* HERO */}
-//             <section className="relative h-[80vh] flex flex-col items-center justify-center text-center px-6 bg-stone-200">
+//             <section className="relative min-h-screen flex items-center px-6 md:px-20">
 
 //                 {/* Background */}
 //                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(200,16,46,0.12),transparent_30%),radial-gradient(circle_at_bottom_left,rgba(1,33,105,0.10),transparent_35%),linear-gradient(to_bottom,#ffffff,#f8f9fc,#eef2ff)]"></div>
 
-//                 <div className="relative z-10 max-w-3xl">
+//                 {/* Grid */}
+//                 <div className="absolute inset-0 opacity-10 bg-[linear-gradient(rgba(0,0,0,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.04)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
 
-//                     <h1 className="text-5xl md:text-7xl font-black tracking-tight leading-tight">
+//                 <div className="relative z-10 grid md:grid-cols-2 gap-14 items-center w-full">
 
-//                         <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#012169] via-black to-[#C8102E]">
-//                             LONDON STUBBLE
-//                         </span>
-//                     </h1>
+//                     {/* LEFT */}
+//                     <div>
 
-//                     <p className="mt-6 text-lg md:text-xl text-gray-600">
-//                         Premium grooming essentials crafted for modern men.
-//                     </p>
-
-//                     <div className="mt-8 flex gap-4 justify-center flex-wrap">
-//                         <button
-//                             onClick={() => navigate("/products")}
-//                             className="bg-[#C8102E] text-white px-8 py-3 hover:scale-105 transition"
-//                         >
-//                             Shop Now
-//                         </button>
-
-//                         <button
-//                             onClick={() => navigate("/products")}
-//                             className="border border-black px-8 py-3 hover:bg-black hover:text-white transition"
-//                         >
-//                             View Collection
-//                         </button>
-//                     </div>
-
-//                 </div>
-//             </section>
-
-//             {/* COLLECTION GRID */}
-//             {/* <section className="max-w-7xl mx-auto py-16 px-4">
-//                 <div className="flex justify-between items-center mb-10">
-//                     <h2 className="text-3xl font-serif">Shop By Collections</h2>
-
-//                     <button
-//                         onClick={() => navigate("/products")}
-//                         className="underline underline-offset-4"
-//                     >
-//                         View All
-//                     </button>
-//                 </div>
-
-//                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-
-//                     <div className="relative group h-96 overflow-hidden cursor-pointer">
 //                         <img
-//                             src="img/WhatsApp Image 2026-04-16 at 3.24.23 PM.jpeg"
-//                             className="w-full h-full object-cover group-hover:scale-105 transition duration-700"
-//                         />
-//                         <h3 className="absolute bottom-6 left-6 text-white text-2xl font-bold">
-//                             Face Care
-//                         </h3>
-//                     </div>
-
-//                     <div className="relative group h-96 overflow-hidden cursor-pointer">
-//                         <img
-//                             src="img/WhatsApp Image 2026-04-16 at 3.34.27 PM.jpeg"
-//                             className="w-full h-full object-cover group-hover:scale-105 transition duration-700"
-//                         />
-//                         <h3 className="absolute bottom-6 left-6 text-white text-2xl font-bold">
-//                             Beard Care
-//                         </h3>
-//                     </div>
-
-//                 </div>
-//             </section> */}
-
-//             {/* VISUAL BRAND STORY SECTION */}
-//             <section className="max-w-7xl mx-auto py-16 px-4">
-
-//                 <div className="text-center mb-12">
-//                     <p className="uppercase tracking-[0.35em] text-sm text-gray-500 mb-3">
-//                         London Standard
-//                     </p>
-
-//                     <h2 className="text-4xl md:text-5xl font-black">
-//                         Crafted Through Care
-//                     </h2>
-
-//                     <p className="text-gray-500 mt-4 max-w-2xl mx-auto">
-//                         Premium grooming essentials designed to elevate your everyday routine.
-//                     </p>
-//                 </div>
-
-//                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
-
-//                     {/* BIG LEFT */}
-//                     <div className="md:col-span-2 relative h-[520px] overflow-hidden group cursor-pointer rounded-2xl">
-//                         <img
-//                             src="img/WhatsApp Image 2026-04-16 at 3.24.23 PM.jpeg"
-//                             className="w-full h-full object-cover group-hover:scale-105 transition duration-700"
+//                             src="/img/logo.png"
+//                             alt="Logo"
+//                             className="h-20 mb-5 object-contain  p-0 m-0 "
 //                         />
 
-//                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
+//                         <p className="uppercase tracking-[0.4em] text-sm text-gray-500 mb-5">
+//                             London Stubble
+//                         </p>
 
-//                         <div className="absolute bottom-8 left-8 text-white max-w-md">
-//                             <p className="uppercase text-xs tracking-[0.3em] mb-3">
-//                                 Precision Formula
-//                             </p>
-
-//                             <h3 className="text-3xl md:text-4xl font-bold">
-//                                 Face Care That Performs
-//                             </h3>
-//                         </div>
-//                     </div>
-
-//                     {/* RIGHT SIDE */}
-//                     <div className="flex flex-col gap-6 h-[520px]">
-
-//                         {/* RIGHT TOP IMAGE */}
-//                         <div className="relative flex-1 overflow-hidden group cursor-pointer rounded-2xl">
-//                             <img
-//                                 src="img/WhatsApp Image 2026-04-16 at 3.34.27 PM.jpeg"
-//                                 className="w-full h-full object-cover group-hover:scale-105 transition duration-700"
-//                             />
-
-//                             <div className="absolute inset-0 bg-black/30"></div>
-
-//                             <div className="absolute bottom-6 left-6 text-white">
-//                                 <h3 className="text-2xl font-bold">
-//                                     Beard Control
-//                                 </h3>
-//                             </div>
-//                         </div>
-
-//                         {/* RIGHT BOTTOM CARD */}
-//                         <div
-//                             onClick={() => navigate("/products")}
-//                             className="flex-1 rounded-2xl bg-gradient-to-br from-[#012169] via-black to-[#C8102E] text-white flex flex-col justify-center px-8 cursor-pointer hover:scale-[1.02] transition"
-//                         >
-//                             <p className="uppercase tracking-[0.3em] text-xs mb-3">
-//                                 Discover More
-//                             </p>
-
-//                             <h3 className="text-3xl font-bold leading-tight">
-//                                 Explore Our Full Collection
-//                             </h3>
-
-//                             <span className="mt-5 text-sm">
-//                                 Shop Now →
+//                         <h1 className="text-5xl md:text-7xl font-black leading-tight">
+//                             Grooming
+//                             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#012169] via-black to-[#C8102E]">
+//                                 Refined.
 //                             </span>
-//                         </div>
+//                         </h1>
 
-//                     </div>
+//                         <p className="mt-6 text-gray-600 text-lg max-w-xl leading-relaxed">
+//                             Premium skincare and beard essentials built for men who move with confidence.
+//                             Powerful formulas. Elevated design.
+//                         </p>
 
-//                 </div>
-//             </section>
-
-//             {/* FEATURE PRODUCT */}
-//             {/* <section className="max-w-7xl mx-auto py-16 px-4 grid md:grid-cols-2 gap-12 border-t border-stone-200">
-
-//                 <div>
-//                     <div className="bg-white h-[500px] border flex items-center justify-center">
-//                         <img
-//                             src="/img/WhatsApp Image 2026-04-18 at 8.55.51 PM.jpeg"
-//                             className="h-full object-contain"
-//                         />
-//                     </div>
-
-//                     <div className="flex gap-4 mt-4">
-//                         {[1, 2, 3, 4].map((i) => (
-//                             <div key={i} className="h-24 w-24 border bg-white"></div>
-//                         ))}
-//                     </div>
-//                 </div>
-
-//                 <div className="flex flex-col justify-center">
-//                     <span className="uppercase text-xs tracking-widest text-gray-500">
-//                         Best Seller
-//                     </span>
-
-//                     <h2 className="text-4xl font-bold mt-2">
-//                         Face Serum
-//                     </h2>
-
-//                     <p className="text-gray-600 mt-5 leading-relaxed">
-//                         Hydrate, repair and brighten your skin with a lightweight formula crafted for men.
-//                     </p>
-
-//                     <div className="text-2xl mt-6 font-semibold">
-//                         ₹699
-//                         <span className="line-through text-gray-400 ml-3 text-lg">
-//                             ₹999
-//                         </span>
-//                     </div>
-
-//                     <div className="flex flex-col gap-3 mt-8">
-//                         <button className="bg-black text-white py-4 uppercase font-semibold">
-//                             Add To Cart
-//                         </button>
-
-//                         <button className="border py-4 uppercase font-semibold">
-//                             Buy It Now
-//                         </button>
-//                     </div>
-//                 </div>
-
-//             </section> */}
-
-//             {/* FEATURES */}
-//             <section className="bg-stone-100 py-16 px-6">
-//                 <div className="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-
-//                     {features.map((item, i) => (
-//                         <div
-//                             key={i}
-//                             className="bg-white border p-6 text-center"
-//                         >
-//                             <div className="text-3xl mb-4">{item.icon}</div>
-//                             <h3 className="text-lg font-semibold">{item.title}</h3>
-//                             <p className="text-sm text-gray-500 mt-2">{item.desc}</p>
-//                         </div>
-//                     ))}
-
-//                 </div>
-//             </section>
-
-//             {/* FAQ */}
-//             <section className="max-w-4xl mx-auto py-20 px-6">
-//                 <h2 className="text-3xl font-bold text-center mb-10">
-//                     Common Asked Questions
-//                 </h2>
-
-//                 <div className="space-y-3">
-//                     {faqs.map((faq, index) => (
-//                         <div key={index} className="border bg-white">
-
+//                         <div className="mt-8 flex gap-4 flex-wrap">
 //                             <button
-//                                 onClick={() =>
-//                                     setOpenFaqIndex(openFaqIndex === index ? null : index)
-//                                 }
-//                                 className="w-full p-5 flex justify-between text-left"
+//                                 onClick={() => navigate("/products")}
+//                                 className="bg-[#C8102E] text-white px-7 py-3 rounded-full font-semibold hover:scale-105 transition"
 //                             >
-//                                 <span>{faq.q}</span>
-//                                 <span>{openFaqIndex === index ? "−" : "+"}</span>
+//                                 Shop Now
 //                             </button>
 
-//                             {openFaqIndex === index && (
-//                                 <div className="px-5 pb-5 text-gray-600">
-//                                     {faq.a}
-//                                 </div>
-//                             )}
+//                             <button
+//                                 onClick={() => navigate("/products")}
+//                                 className="border border-gray-300 px-7 py-3 rounded-full hover:bg-black hover:text-white transition"
+//                             >
+//                                 View Collection
+//                             </button>
+//                         </div>
+//                     </div>
 
+//                     {/* RIGHT */}
+//                     <div className="flex justify-center">
+//                         <div className="relative">
+//                             <div className="absolute -inset-6 bg-gradient-to-r from-[#012169] to-[#C8102E] blur-3xl opacity-15 rounded-full"></div>
+
+//                             <img
+//                                 src="img/model.png"
+//                                 alt="model"
+//                                 className="relative h-[420px] md:h-[560px] object-contain drop-shadow-2xl scale-x-[-1]"
+//                             />
+//                         </div>
+//                     </div>
+
+//                 </div>
+//             </section>
+
+//             {/* TRUST BAR */}
+//             <section className="border-y border-gray-200 bg-white">
+//                 <div className="grid md:grid-cols-4 text-center">
+//                     {[
+//                         "Premium Ingredients",
+//                         "Made For Men",
+//                         "Fast Results",
+//                         "Modern Design",
+//                     ].map((item, i) => (
+//                         <div key={i} className="py-5 text-sm uppercase tracking-[0.25em] text-gray-600">
+//                             {item}
 //                         </div>
 //                     ))}
+//                 </div>
+//             </section>
+
+//             {/* BRAND STORY / PHILOSOPHY SECTION - Pitch Theme Inspired */}
+//             <section className="bg-white">
+//                 <div className="grid md:grid-cols-2">
+
+//                     {/* BOX 1 - TEXT */}
+//                     <div className="bg-gradient-to-br from-white via-[#f8f9fc] to-[#eef3ff] text-gray-900 p-10 md:p-14 flex flex-col justify-center">
+//                         <p className="uppercase tracking-[0.35em] text-sm text-[#C8102E] font-bold mb-3">
+//                             London Standard
+//                         </p>
+
+//                         <h2 className="text-4xl md:text-5xl font-black leading-tight mb-5">
+//                             Our <span className="block text-[#012169]">Philosophy</span>
+//                         </h2>
+
+//                         <p className="text-lg text-gray-700 leading-relaxed max-w-md font-semibold">
+//                             Precision skincare crafted for men who value class, confidence,
+//                             and results.
+//                         </p>
+//                     </div>
+
+//                     {/* BOX 2 - IMAGE */}
+//                     <div className="relative h-[350px] md:h-[450px] overflow-hidden">
+//                         <img
+//                             src="img/WhatsApp Image 2026-04-16 at 3.24.23 PM.jpeg"
+//                             className="w-full h-full object-cover transition duration-700 hover:scale-105"
+//                         />
+//                         <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+//                     </div>
+
+//                     {/* BOX 3 - IMAGE */}
+//                     <div className="relative h-[350px] md:h-[450px] overflow-hidden order-2 md:order-none">
+//                         <img
+//                             src="img/WhatsApp Image 2026-04-16 at 3.34.27 PM.jpeg"
+//                             className="w-full h-full object-cover transition duration-700 hover:scale-105"
+//                         />
+//                         <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+//                     </div>
+
+//                     {/* BOX 4 - TEXT */}
+//                     <div className="bg-gradient-to-br from-[#fff8f8] via-white to-[#eef2ff] text-gray-900 p-10 md:p-14 flex flex-col justify-center">
+//                         <p className="uppercase tracking-[0.35em] text-sm text-[#C8102E] font-bold mb-3">
+//                             Premium Grooming
+//                         </p>
+
+//                         <h2 className="text-4xl md:text-5xl font-black leading-tight mb-5">
+//                             Effective <span className="block text-[#012169]">Grooming</span>
+//                         </h2>
+
+//                         <p className="text-lg text-gray-700 leading-relaxed max-w-md font-semibold">
+//                             Clean formulas, sharp styling, and timeless British-inspired care
+//                             for the modern man.
+//                         </p>
+//                     </div>
+
 //                 </div>
 //             </section>
 
 //             {/* PRODUCTS */}
-//             <section className="max-w-7xl mx-auto py-20 px-6">
-
+//             <section className="py-24 px-6 md:px-20">
 //                 <div className="text-center mb-14">
-//                     <p className="uppercase tracking-[0.35em] text-sm text-gray-500 mb-3">
-//                         London Stubble
+//                     <h2 className="text-4xl md:text-5xl font-bold">Best Sellers</h2>
+//                     <p className="text-gray-500 mt-3">
+//                         Engineered for performance. Styled for confidence.
 //                     </p>
-
-//                     <h2 className="text-4xl md:text-5xl font-black">
-//                         Best Sellers
-//                     </h2>
 //                 </div>
 
-//                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+//                 <div className="grid md:grid-cols-2 gap-8">
 
 //                     {[
 //                         {
 //                             title: "Face Serum",
 //                             img: "/img/WhatsApp Image 2026-04-18 at 8.55.51 PM.jpeg",
+//                             desc: "Hydrate, repair and brighten your skin with a lightweight formula.",
 //                         },
 //                         {
 //                             title: "Beard Serum",
 //                             img: "/img/WhatsApp Image 2026-04-18 at 8.49.33 PM.jpeg",
+//                             desc: "Control, nourish and define your beard with premium care.",
 //                         },
 //                     ].map((item, i) => (
 //                         <div
 //                             key={i}
-//                             className="group bg-white border border-gray-200 overflow-hidden hover:shadow-xl transition duration-300"
+//                             onClick={() => navigate("/products")}
+//                             className="group cursor-pointer rounded-3xl border border-gray-200 bg-white p-6 hover:-translate-y-2 hover:shadow-2xl transition"
 //                         >
+//                             <img
+//                                 src={item.img}
+//                                 alt={item.title}
+//                                 className="w-full h-80 object-contain group-hover:scale-105 transition duration-300"
+//                             />
 
-//                             {/* IMAGE */}
-//                             <div className="h-[430px] bg-[#f8f8f8] overflow-hidden">
-//                                 <img
-//                                     src={item.img}
-//                                     alt={item.title}
-//                                     className="w-full h-full object-cover group-hover:scale-105 transition duration-700"
-//                                 />
-//                             </div>
+//                             <h3 className="mt-6 text-2xl font-semibold">{item.title}</h3>
+//                             <p className="text-gray-500 mt-2">{item.desc}</p>
 
-//                             {/* CONTENT */}
-//                             <div className="p-6 flex items-center justify-between gap-4">
-
-//                                 <div>
-//                                     <h3 className="text-2xl font-semibold">
-//                                         {item.title}
-//                                     </h3>
-
-//                                     <p className="text-sm text-gray-500 mt-1">
-//                                         Premium daily grooming essential
-//                                     </p>
-//                                 </div>
-
-//                                 <button
-//                                     onClick={() => navigate("/products")}
-//                                     className="bg-black text-white px-6 py-3 hover:bg-[#C8102E] transition whitespace-nowrap"
-//                                 >
-//                                     Buy Now
-//                                 </button>
-
-//                             </div>
-
+//                             <button className="mt-5 text-[#C8102E] font-semibold">
+//                                 Explore →
+//                             </button>
 //                         </div>
 //                     ))}
 
 //                 </div>
 //             </section>
 
-//             {/* CTA */}
-//             <section className="relative overflow-hidden bg-[#050505] text-white py-24 px-6 text-center">
 
-//                 {/* Union Jack Inspired Background */}
-//                 <div className="absolute inset-0 opacity-20 bg-[linear-gradient(125deg,transparent_42%,#C8102E_42%,#C8102E_48%,transparent_48%,transparent_52%,#012169_52%,#012169_58%,transparent_58%),linear-gradient(-125deg,transparent_42%,#C8102E_42%,#C8102E_48%,transparent_48%,transparent_52%,#012169_52%,#012169_58%,transparent_58%)]"></div>
 
-//                 <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/70 to-black"></div>
+//             {/* WHY US */}
+//             <section className="py-24 px-6 md:px-20 bg-gradient-to-r from-[#012169] via-[#1a1a1a] to-[#C8102E] text-white">
+//                 <div className="grid md:grid-cols-2 gap-12 items-center">
 
-//                 <div className="relative z-10 max-w-4xl mx-auto">
+//                     <div>
+//                         <h2 className="text-4xl md:text-5xl font-bold">
+//                             Why Choose Us
+//                         </h2>
 
-//                     <p className="uppercase tracking-[0.45em] text-sm text-gray-400 mb-5">
-//                         London Standard Grooming
-//                     </p>
+//                         <p className="mt-5 text-gray-200 leading-relaxed">
+//                             London Stubble combines clean formulations with premium aesthetics.
+//                             Designed for men who value results and style.
+//                         </p>
+//                     </div>
 
-//                     <h2 className="text-5xl md:text-7xl font-black leading-tight">
-//                         Look Sharp.
-//                         <span className="block text-transparent bg-clip-text bg-gradient-to-r from-white via-[#C8102E] to-[#012169]">
-//                             Feel Powerful.
-//                         </span>
-//                     </h2>
-
-//                     <p className="text-gray-300 mt-6 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-//                         Premium grooming essentials inspired by timeless British style and built for the modern man.
-//                     </p>
-
-//                     <div className="mt-10 flex justify-center gap-4 flex-wrap">
-
-//                         <button
-//                             onClick={() => navigate("/products")}
-//                             className="bg-[#C8102E] hover:bg-[#a80f27] px-8 py-4 font-semibold tracking-wide rounded-full shadow-2xl transition hover:scale-105"
-//                         >
-//                             Start Shopping
-//                         </button>
-
-//                         <button
-//                             onClick={() => navigate("/products")}
-//                             className="border border-white/30 px-8 py-4 rounded-full hover:bg-white hover:text-black transition"
-//                         >
-//                             View Collection
-//                         </button>
-
+//                     <div className="grid grid-cols-2 gap-5">
+//                         {[
+//                             "Clean Formulas",
+//                             "Powerful Results",
+//                             "Luxury Feel",
+//                             "Simple Routine",
+//                         ].map((item, i) => (
+//                             <div
+//                                 key={i}
+//                                 className="bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center"
+//                             >
+//                                 {item}
+//                             </div>
+//                         ))}
 //                     </div>
 
 //                 </div>
 //             </section>
 
-//             {/* FOOTER */}
-//             {/* <footer className="bg-black text-gray-400 py-12 px-6 text-center">
-//                 <h2 className="text-white text-2xl mb-5">London Stubble</h2>
+//             <section className="w-full bg-white">
+//                 <div className="grid grid-cols-1 md:grid-cols-2">
 
-//                 <div className="flex justify-center gap-8 mb-6 text-sm uppercase">
-//                     <a href="#">Shop</a>
-//                     <a href="#">About</a>
-//                     <a href="#">Contact</a>
-//                     <a href="#">Privacy</a>
+//                     {/* LEFT CARD */}
+//                     <div className="bg-[#fdf7f7] flex flex-col items-center justify-center px-6 py-14 text-center">
+
+//                         {/* Artistic Shape */}
+//                         <div className="w-full max-w-[440px] bg-[#f8eaea] rounded-[42%_58%_55%_45%/42%_38%_62%_58%] p-6 shadow-md">
+//                             <img
+//                                 src="img/WhatsApp Image 2026-04-19 at 5.01.08 PM.jpeg"
+//                                 alt="Serum"
+//                                 className="w-full h-auto rounded-3xl object-cover"
+//                             />
+//                         </div>
+
+//                         <p className="mt-8 text-sm tracking-[4px] uppercase font-semibold text-[#C8102E]">
+//                             London Formula
+//                         </p>
+
+//                         <h2 className="mt-3 text-3xl md:text-4xl font-bold text-[#8B0000]">
+//                             SERUMS
+//                         </h2>
+//                     </div>
+
+//                     {/* RIGHT CARD */}
+//                     <div className="bg-[#f7f9ff] flex flex-col items-center justify-center px-6 py-14 text-center">
+
+//                         {/* Artistic Shape */}
+//                         <div className="w-full max-w-[440px] bg-[#e9eeff] rounded-[58%_42%_40%_60%/45%_60%_40%_55%] p-6 shadow-md">
+//                             <img
+//                                 src="img/WhatsApp Image 2026-04-19 at 5.01.13 PM.jpeg"
+//                                 alt="Face Wash"
+//                                 className="w-full h-auto rounded-3xl object-cover"
+//                             />
+//                         </div>
+
+//                         <p className="mt-8 text-sm tracking-[4px] uppercase font-semibold text-[#012169]">
+//                             Premium Cleanse
+//                         </p>
+
+//                         <h2 className="mt-3 text-3xl md:text-4xl font-bold text-[#012169]">
+//                             FACE WASH
+//                         </h2>
+//                     </div>
+
 //                 </div>
+//             </section>
 
-//                 <p className="text-xs">
-//                     © 2026 London Stubble. All rights reserved.
+//             {/* CTA */}
+//             <section className="py-24 px-6 md:px-20 text-center bg-white">
+
+//                 <h2 className="text-4xl md:text-6xl font-black leading-tight">
+//                     Look Sharp.
+//                     <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#012169] via-black to-[#C8102E]">
+//                         Feel Powerful.
+//                     </span>
+//                 </h2>
+
+//                 <p className="mt-5 text-gray-500 max-w-2xl mx-auto">
+//                     Upgrade your grooming routine with products built for the modern man.
 //                 </p>
-//             </footer> */}
+
+//                 <button
+//                     onClick={() => navigate("/products")}
+//                     className="mt-8 bg-[#C8102E] text-white px-8 py-4 rounded-full font-semibold hover:scale-105 transition"
+//                 >
+//                     Start Shopping
+//                 </button>
+
+//             </section>
 
 //         </div>
 //     );
-// };
+// }
 
-// export default Home;
+
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
+const Home = () => {
+    const navigate = useNavigate();
+    const [openFaqIndex, setOpenFaqIndex] = useState(null);
+
+    const features = [
+        {
+            icon: "💎",
+            title: "Premium Ingredients",
+            desc: "Clean and effective formulas built for visible results.",
+        },
+        {
+            icon: "✨",
+            title: "Luxury Grooming",
+            desc: "Designed for modern men who value premium care.",
+        },
+        {
+            icon: "🛡️",
+            title: "Skin Safe",
+            desc: "Gentle products crafted for daily use.",
+        },
+        {
+            icon: "🔄",
+            title: "Easy Returns",
+            desc: "Simple and smooth replacement experience.",
+        },
+    ];
+
+    const faqs = [
+        {
+            q: "Are your products suitable for all skin types?",
+            a: "Yes, our formulas are designed for most skin types including oily, dry and combination skin.",
+        },
+        {
+            q: "How long does delivery take?",
+            a: "Orders usually arrive within 3-7 business days depending on your location.",
+        },
+        {
+            q: "Can I use beard serum daily?",
+            a: "Yes, daily use is recommended for best nourishment and styling.",
+        },
+        {
+            q: "Do you offer returns?",
+            a: "Yes, we offer hassle-free returns on eligible products.",
+        },
+    ];
+
+    return (
+        <div className="bg-stone-50 text-stone-900 overflow-hidden">
+
+            {/* HERO */}
+            <section className="relative h-[80vh] flex flex-col items-center justify-center text-center px-6 bg-stone-200">
+
+                {/* Background */}
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(200,16,46,0.12),transparent_30%),radial-gradient(circle_at_bottom_left,rgba(1,33,105,0.10),transparent_35%),linear-gradient(to_bottom,#ffffff,#f8f9fc,#eef2ff)]"></div>
+
+                <div className="relative z-10 max-w-3xl">
+
+                    <h1 className="text-5xl md:text-7xl font-black tracking-tight leading-tight">
+
+                        <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#012169] via-black to-[#C8102E]">
+                            LONDON STUBBLE
+                        </span>
+                    </h1>
+
+                    <p className="mt-6 text-lg md:text-xl text-gray-600">
+                        Premium grooming essentials crafted for modern men.
+                    </p>
+
+                    <div className="mt-8 flex gap-4 justify-center flex-wrap">
+                        <button
+                            onClick={() => navigate("/products")}
+                            className="bg-[#C8102E] text-white px-8 py-3 hover:scale-105 transition"
+                        >
+                            Shop Now
+                        </button>
+
+                        <button
+                            onClick={() => navigate("/products")}
+                            className="border border-black px-8 py-3 hover:bg-black hover:text-white transition"
+                        >
+                            View Collection
+                        </button>
+                    </div>
+
+                </div>
+            </section>
+
+            {/* COLLECTION GRID */}
+            {/* <section className="max-w-7xl mx-auto py-16 px-4">
+                <div className="flex justify-between items-center mb-10">
+                    <h2 className="text-3xl font-serif">Shop By Collections</h2>
+
+                    <button
+                        onClick={() => navigate("/products")}
+                        className="underline underline-offset-4"
+                    >
+                        View All
+                    </button>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                    <div className="relative group h-96 overflow-hidden cursor-pointer">
+                        <img
+                            src="img/WhatsApp Image 2026-04-16 at 3.24.23 PM.jpeg"
+                            className="w-full h-full object-cover group-hover:scale-105 transition duration-700"
+                        />
+                        <h3 className="absolute bottom-6 left-6 text-white text-2xl font-bold">
+                            Face Care
+                        </h3>
+                    </div>
+
+                    <div className="relative group h-96 overflow-hidden cursor-pointer">
+                        <img
+                            src="img/WhatsApp Image 2026-04-16 at 3.34.27 PM.jpeg"
+                            className="w-full h-full object-cover group-hover:scale-105 transition duration-700"
+                        />
+                        <h3 className="absolute bottom-6 left-6 text-white text-2xl font-bold">
+                            Beard Care
+                        </h3>
+                    </div>
+
+                </div>
+            </section> */}
+
+            {/* VISUAL BRAND STORY SECTION */}
+            <section className="max-w-7xl mx-auto py-16 px-4">
+
+                <div className="text-center mb-12">
+                    <p className="uppercase tracking-[0.35em] text-sm text-gray-500 mb-3">
+                        London Standard
+                    </p>
+
+                    <h2 className="text-4xl md:text-5xl font-black">
+                        Crafted Through Care
+                    </h2>
+
+                    <p className="text-gray-500 mt-4 max-w-2xl mx-auto">
+                        Premium grooming essentials designed to elevate your everyday routine.
+                    </p>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+
+                    {/* BIG LEFT */}
+                    <div className="md:col-span-2 relative h-[520px] overflow-hidden group cursor-pointer rounded-2xl">
+                        <img
+                            src="img/WhatsApp Image 2026-04-16 at 3.24.23 PM.jpeg"
+                            className="w-full h-full object-cover group-hover:scale-105 transition duration-700"
+                        />
+
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
+
+                        <div className="absolute bottom-8 left-8 text-white max-w-md">
+                            <p className="uppercase text-xs tracking-[0.3em] mb-3">
+                                Precision Formula
+                            </p>
+
+                            <h3 className="text-3xl md:text-4xl font-bold">
+                                Face Care That Performs
+                            </h3>
+                        </div>
+                    </div>
+
+                    {/* RIGHT SIDE */}
+                    <div className="flex flex-col gap-6 h-[520px]">
+
+                        {/* RIGHT TOP IMAGE */}
+                        <div className="relative flex-1 overflow-hidden group cursor-pointer rounded-2xl">
+                            <img
+                                src="img/WhatsApp Image 2026-04-16 at 3.34.27 PM.jpeg"
+                                className="w-full h-full object-cover group-hover:scale-105 transition duration-700"
+                            />
+
+                            <div className="absolute inset-0 bg-black/30"></div>
+
+                            <div className="absolute bottom-6 left-6 text-white">
+                                <h3 className="text-2xl font-bold">
+                                    Beard Control
+                                </h3>
+                            </div>
+                        </div>
+
+                        {/* RIGHT BOTTOM CARD */}
+                        <div
+                            onClick={() => navigate("/products")}
+                            className="flex-1 rounded-2xl bg-gradient-to-br from-[#012169] via-black to-[#C8102E] text-white flex flex-col justify-center px-8 cursor-pointer hover:scale-[1.02] transition"
+                        >
+                            <p className="uppercase tracking-[0.3em] text-xs mb-3">
+                                Discover More
+                            </p>
+
+                            <h3 className="text-3xl font-bold leading-tight">
+                                Explore Our Full Collection
+                            </h3>
+
+                            <span className="mt-5 text-sm">
+                                Shop Now →
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+
+            {/* FEATURE PRODUCT */}
+            {/* <section className="max-w-7xl mx-auto py-16 px-4 grid md:grid-cols-2 gap-12 border-t border-stone-200">
+
+                <div>
+                    <div className="bg-white h-[500px] border flex items-center justify-center">
+                        <img
+                            src="/img/WhatsApp Image 2026-04-18 at 8.55.51 PM.jpeg"
+                            className="h-full object-contain"
+                        />
+                    </div>
+
+                    <div className="flex gap-4 mt-4">
+                        {[1, 2, 3, 4].map((i) => (
+                            <div key={i} className="h-24 w-24 border bg-white"></div>
+                        ))}
+                    </div>
+                </div>
+
+                <div className="flex flex-col justify-center">
+                    <span className="uppercase text-xs tracking-widest text-gray-500">
+                        Best Seller
+                    </span>
+
+                    <h2 className="text-4xl font-bold mt-2">
+                        Face Serum
+                    </h2>
+
+                    <p className="text-gray-600 mt-5 leading-relaxed">
+                        Hydrate, repair and brighten your skin with a lightweight formula crafted for men.
+                    </p>
+
+                    <div className="text-2xl mt-6 font-semibold">
+                        ₹699
+                        <span className="line-through text-gray-400 ml-3 text-lg">
+                            ₹999
+                        </span>
+                    </div>
+
+                    <div className="flex flex-col gap-3 mt-8">
+                        <button className="bg-black text-white py-4 uppercase font-semibold">
+                            Add To Cart
+                        </button>
+
+                        <button className="border py-4 uppercase font-semibold">
+                            Buy It Now
+                        </button>
+                    </div>
+                </div>
+
+            </section> */}
+
+            {/* FEATURES */}
+            <section className="bg-stone-100 py-16 px-6">
+                <div className="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                    {features.map((item, i) => (
+                        <div
+                            key={i}
+                            className="bg-white border p-6 text-center"
+                        >
+                            <div className="text-3xl mb-4">{item.icon}</div>
+                            <h3 className="text-lg font-semibold">{item.title}</h3>
+                            <p className="text-sm text-gray-500 mt-2">{item.desc}</p>
+                        </div>
+                    ))}
+
+                </div>
+            </section>
+
+            {/* FAQ */}
+            <section className="max-w-4xl mx-auto py-20 px-6">
+                <h2 className="text-3xl font-bold text-center mb-10">
+                    Common Asked Questions
+                </h2>
+
+                <div className="space-y-3">
+                    {faqs.map((faq, index) => (
+                        <div key={index} className="border bg-white">
+
+                            <button
+                                onClick={() =>
+                                    setOpenFaqIndex(openFaqIndex === index ? null : index)
+                                }
+                                className="w-full p-5 flex justify-between text-left"
+                            >
+                                <span>{faq.q}</span>
+                                <span>{openFaqIndex === index ? "−" : "+"}</span>
+                            </button>
+
+                            {openFaqIndex === index && (
+                                <div className="px-5 pb-5 text-gray-600">
+                                    {faq.a}
+                                </div>
+                            )}
+
+                        </div>
+                    ))}
+                </div>
+            </section>
+
+            {/* PRODUCTS */}
+            <section className="max-w-7xl mx-auto py-20 px-6">
+
+                <div className="text-center mb-14">
+                    <p className="uppercase tracking-[0.35em] text-sm text-gray-500 mb-3">
+                        London Stubble
+                    </p>
+
+                    <h2 className="text-4xl md:text-5xl font-black">
+                        Best Sellers
+                    </h2>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                    {[
+                        {
+                            title: "Face Serum",
+                            img: "/img/WhatsApp Image 2026-04-18 at 8.55.51 PM.jpeg",
+                        },
+                        {
+                            title: "Beard Serum",
+                            img: "/img/WhatsApp Image 2026-04-18 at 8.49.33 PM.jpeg",
+                        },
+                    ].map((item, i) => (
+                        <div
+                            key={i}
+                            className="group bg-white border border-gray-200 overflow-hidden hover:shadow-xl transition duration-300"
+                        >
+
+                            {/* IMAGE */}
+                            <div className="h-[430px] bg-[#f8f8f8] overflow-hidden">
+                                <img
+                                    src={item.img}
+                                    alt={item.title}
+                                    className="w-full h-full object-cover group-hover:scale-105 transition duration-700"
+                                />
+                            </div>
+
+                            {/* CONTENT */}
+                            <div className="p-6 flex items-center justify-between gap-4">
+
+                                <div>
+                                    <h3 className="text-2xl font-semibold">
+                                        {item.title}
+                                    </h3>
+
+                                    <p className="text-sm text-gray-500 mt-1">
+                                        Premium daily grooming essential
+                                    </p>
+                                </div>
+
+                                <button
+                                    onClick={() => navigate("/products")}
+                                    className="bg-black text-white px-6 py-3 hover:bg-[#C8102E] transition whitespace-nowrap"
+                                >
+                                    Buy Now
+                                </button>
+
+                            </div>
+
+                        </div>
+                    ))}
+
+                </div>
+            </section>
+
+            {/* CTA */}
+            <section className="relative overflow-hidden bg-[#050505] text-white py-24 px-6 text-center">
+
+                {/* Union Jack Inspired Background */}
+                <div className="absolute inset-0 opacity-20 bg-[linear-gradient(125deg,transparent_42%,#C8102E_42%,#C8102E_48%,transparent_48%,transparent_52%,#012169_52%,#012169_58%,transparent_58%),linear-gradient(-125deg,transparent_42%,#C8102E_42%,#C8102E_48%,transparent_48%,transparent_52%,#012169_52%,#012169_58%,transparent_58%)]"></div>
+
+                <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/70 to-black"></div>
+
+                <div className="relative z-10 max-w-4xl mx-auto">
+
+                    <p className="uppercase tracking-[0.45em] text-sm text-gray-400 mb-5">
+                        London Standard Grooming
+                    </p>
+
+                    <h2 className="text-5xl md:text-7xl font-black leading-tight">
+                        Look Sharp.
+                        <span className="block text-transparent bg-clip-text bg-gradient-to-r from-white via-[#C8102E] to-[#012169]">
+                            Feel Powerful.
+                        </span>
+                    </h2>
+
+                    <p className="text-gray-300 mt-6 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+                        Premium grooming essentials inspired by timeless British style and built for the modern man.
+                    </p>
+
+                    <div className="mt-10 flex justify-center gap-4 flex-wrap">
+
+                        <button
+                            onClick={() => navigate("/products")}
+                            className="bg-[#C8102E] hover:bg-[#a80f27] px-8 py-4 font-semibold tracking-wide rounded-full shadow-2xl transition hover:scale-105"
+                        >
+                            Start Shopping
+                        </button>
+
+                        <button
+                            onClick={() => navigate("/products")}
+                            className="border border-white/30 px-8 py-4 rounded-full hover:bg-white hover:text-black transition"
+                        >
+                            View Collection
+                        </button>
+
+                    </div>
+
+                </div>
+            </section>
+
+            {/* FOOTER */}
+            {/* <footer className="bg-black text-gray-400 py-12 px-6 text-center">
+                <h2 className="text-white text-2xl mb-5">London Stubble</h2>
+
+                <div className="flex justify-center gap-8 mb-6 text-sm uppercase">
+                    <a href="#">Shop</a>
+                    <a href="#">About</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Privacy</a>
+                </div>
+
+                <p className="text-xs">
+                    © 2026 London Stubble. All rights reserved.
+                </p>
+            </footer> */}
+
+        </div>
+    );
+};
+
+export default Home;
 
 
 // import React from "react";
